@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои Проекты | Портфолио</title>
+    <style>
+        /* --- Настройки дизайна --- */
+        :root {
+            --bg-color: #0f172a;       /* Темный фон */
+            --card-bg: #1e293b;        /* Фон карточек */
+            --text-main: #f8fafc;      /* Белый текст */
+            --text-sec: #94a3b8;       /* Серый текст */
+            --accent: #38bdf8;         /* Голубой акцент */
+            --hover-bg: #334155;       /* Цвет при наведении */
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Контейнер по центру */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Профиль (Аватар и Имя) */
+        .profile {
+            margin-bottom: 40px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 15px;
+            background-color: #ddd; /* Заглушка, если нет фото */
+        }
+
+        .name {
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .bio {
+            color: var(--text-sec);
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Список ссылок */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Эффект при наведении */
+        .link-card:hover {
+            transform: translateY(-3px);
+            background-color: var(--hover-bg);
+            border-color: var(--accent);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-info {
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .link-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .link-desc {
+            font-size: 0.9rem;
+            color: var(--text-sec);
+        }
+
+        .link-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-left: 15px;
+        }
+
+        /* Соцсети внизу */
+        .socials {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            color: var(--text-sec);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+        }
+
+        /* Адаптивность для телефонов */
+        @media (max-width: 480px) {
+            .name { font-size: 1.5rem; }
+            .link-card { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Блок Профиля -->
+        <div class="profile">
+            <!-- Замени ссылку ниже на свое фото -->
+            <img src="https://via.placeholder.com/150" alt="Мое фото" class="avatar">
+            
+            <h1 class="name">Дмитрий Кондратьев</h1>
+            <p class="bio">Веб-разработчик | Дизайнер | Блогер</p>
+        </div>
+
+        <!-- Блок Ссылок на проекты -->
+        <div class="links-container">
+            
+           
+
+            <!-- Ссылка 2 -->
+            <a href="https://batintazik.github.io/sait-1/%D0%BD%D0%BA%20%D1%81%D0%B0%D0%B9%D1%82/index.html" target="_blank" class="link-card">
+                <div class="link-info">
+                    <span class="link-title">Сайт моего города</span>
+                    <span class="link-desc">Конструктивно пробная версия</span>
+                </div>
+                <div class="link-icon">✍️</div>
+            </a>
+
+            <!-- Ссылка 4 -->
+            <a href="https://github.com/batintazik" target="_blank" class="link-card">
+                <div class="link-info">
+                    <span class="link-title">GitHub Портфолио</span>
+                    <span class="link-desc">Обама</span>
+                </div>
+                <div class="link-icon">💻</div>
+            </a>
+
+        </div>
+
+        <!-- Соцсети (Контакты) -->
+        <div class="socials">
+            <a href="https://t.me/im00rta1" class="social-link" title="Telegram">✈️</a>
+            <a href="вк мне елнь" class="social-link" title="VK">👍</a>
+            <a href="daemonsiz333@gmail.com" class="social-link" title="Email">📧</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
